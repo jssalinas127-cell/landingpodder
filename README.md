@@ -11,6 +11,8 @@ Es un sitio estático de un solo archivo. No requiere build ni dependencias.
 ```
 podder-landing/
 ├── index.html          # La landing completa (HTML + CSS embebido)
+├── pulso/
+│   └── index.html      # Pulso de Navegación Organizacional (subpágina /pulso, misma identidad)
 └── assets/
     ├── og-image.png    # Imagen para compartir en redes (Open Graph)
     └── tml-logo-white-transparent.png
@@ -33,6 +35,7 @@ python3 -m http.server 8000
 3. Dolor
 4. Costo de no actuar
 5. Antes / Después
+5b. Pulso de Navegación Organizacional (CTA secundario → `/pulso/`, diagnóstico gratuito de 15 min; el resultado cierra en "Asegura tu cupo")
 6. Mecanismo PODDER (seis habilidades, un método)
 7. Cómo funciona (currículo, logística, detalles operativos)
 8. Comunidad de pares
