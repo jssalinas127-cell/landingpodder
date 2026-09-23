@@ -225,11 +225,11 @@
   t.src=v;s=b.getElementsByTagName(e)[0];
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', 'PIXEL_ID_AQUI');
+  fbq('init', '1407493831473755');
   fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=PIXEL_ID_AQUI&ev=PageView&noscript=1"/></noscript>
+  src="https://www.facebook.com/tr?id=1407493831473755&ev=PageView&noscript=1"/></noscript>
 </head>
 <body>
 
@@ -371,5 +371,27 @@
 <script src="report.js"></script>
 <script src="app-logic.js"></script>
 <script src="../assets/whatsapp.js"></script>
+
+<!-- Eventos de conversión Meta Pixel -->
+<script>
+  (function(){
+    var form = document.getElementById('leadForm');
+    if(form){
+      form.addEventListener('submit', function(){
+        if(window.fbq) fbq('track', 'Lead', { content_name: 'Pulso de Navegación Organizacional' });
+      }, true);
+    }
+    document.addEventListener('click', function(e){
+      var a = e.target.closest ? e.target.closest('a[href*="checkout.wompi.co"]') : null;
+      if(a && window.fbq){
+        fbq('track', 'InitiateCheckout', {
+          content_name: 'P.O.D.D.E.R Cohorte 1',
+          value: 999000,
+          currency: 'COP'
+        });
+      }
+    }, true);
+  })();
+</script>
 </body>
 </html>
