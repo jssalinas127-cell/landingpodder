@@ -132,7 +132,7 @@
       <div class="card date-card">
         <span class="tag">Ruta 1 · Híbrida · Bogotá</span>
         <span class="day">17 al 21 de noviembre de 2026</span>
-        <span class="meta">Martes 17, miércoles 18 y jueves 19 · 6:00 a 7:20 p. m. · Virtual en vivo</span>
+        <span class="meta">Martes 17 a viernes 20 · 7:00 a 8:00 p. m. · Virtual en vivo</span>
         <span class="meta">Sábado 21 · 8:00 a. m. a 12:00 m. · Presencial en Bogotá (la sede exacta te llega por correo)</span>
         <div class="actions">
           <a class="btn btn-secondary" data-gcal="h1" href="#" target="_blank" rel="noopener">Google Calendar · sesiones virtuales</a>
@@ -143,10 +143,10 @@
       <div class="card date-card">
         <span class="tag">Ruta 2 · 100% virtual</span>
         <span class="day">17 al 26 de noviembre de 2026</span>
-        <span class="meta">Martes 17, miércoles 18 y jueves 19 · 6:00 a 7:20 p. m. · Virtual en vivo</span>
-        <span class="meta">Martes 24, miércoles 25 y jueves 26 · 6:00 a 7:20 p. m. · Virtual en vivo</span>
+        <span class="meta">Martes 17 a viernes 20 · 7:00 a 8:00 p. m. · Virtual en vivo</span>
+        <span class="meta">Lunes 23 a jueves 26 · 7:00 a 8:00 p. m. · Virtual en vivo</span>
         <div class="actions">
-          <a class="btn btn-secondary" data-gcal="v1" href="#" target="_blank" rel="noopener">Google Calendar · las 6 sesiones</a>
+          <a class="btn btn-secondary" data-gcal="v1" href="#" target="_blank" rel="noopener">Google Calendar · las 8 sesiones</a>
           <a class="btn btn-ghost" data-ics="virtual" href="#">Otro calendario (.ics)</a>
         </div>
       </div>
@@ -187,7 +187,7 @@
 <script>
 (function(){
   // ===== Sesiones (hora de Bogotá, UTC-5, sin horario de verano) =====
-  var VIRTUAL = { h1:18, m1:0, h2:19, m2:20 };   // 6:00 a 7:20 p. m.
+  var VIRTUAL = { h1:19, m1:0, h2:20, m2:0 };    // 7:00 a 8:00 p. m.
   var PRESENCIAL = { h1:8, m1:0, h2:12, m2:0 };  // 8:00 a. m. a 12:00 m.
   var LOC_VIRTUAL = 'En línea (el enlace llega por correo)';
   var LOC_BOGOTA  = 'Bogotá, Colombia (sede exacta por correo)';
@@ -200,12 +200,15 @@
       s('2026-11-17', VIRTUAL, B1, LOC_VIRTUAL),
       s('2026-11-18', VIRTUAL, B1, LOC_VIRTUAL),
       s('2026-11-19', VIRTUAL, B1, LOC_VIRTUAL),
+      s('2026-11-20', VIRTUAL, B1, LOC_VIRTUAL),
       s('2026-11-21', PRESENCIAL, B2+' (presencial)', LOC_BOGOTA)
     ],
     virtual: [
       s('2026-11-17', VIRTUAL, B1, LOC_VIRTUAL),
       s('2026-11-18', VIRTUAL, B1, LOC_VIRTUAL),
       s('2026-11-19', VIRTUAL, B1, LOC_VIRTUAL),
+      s('2026-11-20', VIRTUAL, B1, LOC_VIRTUAL),
+      s('2026-11-23', VIRTUAL, B2, LOC_VIRTUAL),
       s('2026-11-24', VIRTUAL, B2, LOC_VIRTUAL),
       s('2026-11-25', VIRTUAL, B2, LOC_VIRTUAL),
       s('2026-11-26', VIRTUAL, B2, LOC_VIRTUAL)
@@ -213,9 +216,9 @@
   };
   // Google Calendar: un enlace por bloque de sesiones (con repetición cuando aplica)
   var GCAL = {
-    h1: { first: ROUTES.hibrida[0], title:'P.O.D.D.E.R · Sesiones virtuales (Bloque 1)', recur:'RRULE:FREQ=DAILY;COUNT=3' },
-    h2: { first: ROUTES.hibrida[3], title:'P.O.D.D.E.R · Sesión presencial (Bloque 2)', recur:'' },
-    v1: { first: ROUTES.virtual[0], title:'P.O.D.D.E.R · Sesiones virtuales', recur:'RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH;COUNT=6' }
+    h1: { first: ROUTES.hibrida[0], title:'P.O.D.D.E.R · Sesiones virtuales (Bloque 1)', recur:'RRULE:FREQ=DAILY;COUNT=4' },
+    h2: { first: ROUTES.hibrida[4], title:'P.O.D.D.E.R · Sesión presencial (Bloque 2)', recur:'' },
+    v1: { first: ROUTES.virtual[0], title:'P.O.D.D.E.R · Sesiones virtuales', recur:'RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR;COUNT=8' }
   };
   // =====================================================================
 
